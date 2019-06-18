@@ -108,6 +108,7 @@ class QmpCommon():
         return self.transaction_action('block-dirty-bitmap-add',
             node=node,
             name=name,
+            persistent=True,
             **kwargs
         )
 

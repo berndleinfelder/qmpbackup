@@ -105,10 +105,8 @@ for more information and commands.
 Limitations
 -----------
 
-1) Dirty-bitmaps are not saved through vm shutdowns currently, qmpbackup will
-fail accordingly if no bitmap exists and an incremental backup is attempted.
-This feature is currently worked on in Qemu and future versions might change
-that behavior and will make bitmaps persistent.
+1) As persitent dirty-bitmaps were added to qemu in 2.10, dirty-bitmaps are 
+saved through vm shutdowns.
 
 2) Using the QMP protocol it cannot be used together with libvirt as libvirt
 exclusively uses the virtual machines monitor socket. I think it will make sure
